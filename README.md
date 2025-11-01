@@ -1,14 +1,18 @@
+![CI](https://github.com/TallantM/ecs-fargate-ci/actions/workflows/ecs.yml/badge.svg)
+
 # ECS Fargate CI
 
 **Playwright in AWS ECS Fargate – Docker + CI/CD**
 
-![CI](https://github.com/TallantM/ecs-fargate-ci/actions/workflows/ecs.yml/badge.svg)
+Serverless test execution in AWS Fargate using Docker + GitHub Actions.
 
 ## Features
 - Playwright latest + TypeScript
-- Dockerized test execution
-- AWS ECS Fargate task definition
+- Docker + ECR-ready
+- Fargate task definition
 - GitHub Actions CI (test + Docker build)
+- Zero servers
+- Cloud-native execution
 
 ## Local Run
 ```bash
