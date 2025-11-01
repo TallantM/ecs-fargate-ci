@@ -1,0 +1,16 @@
+name: ECS Fargate CI
+on: [push]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npx playwright test
+      - name: Build Docker
+        run: docker build -t playwright-ecs .
