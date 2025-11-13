@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  tests-1:
+    build: .
+    environment:
+      - PLAYWRIGHT_TEST_BASE_URL=http://app:3000
+  tests-2:
+    build: .
+    environment:
+      - PLAYWRIGHT_TEST_BASE_URL=http://app:3000
+  # ... add up to tests-10 if you want
+  app:
+    image: kennethreitz/httpbin
+    ports:
+      - "3000:80"
