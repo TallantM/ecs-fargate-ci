@@ -18,3 +18,4 @@ Serverless test execution in AWS Fargate using Docker + GitHub Actions.
 ```bash
 npm ci
 npx playwright test
+
